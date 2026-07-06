@@ -3,7 +3,7 @@ services:
   vproapp:
     image: krish889/apprepo:myapp
     ports:
-      - "8080:8080"
+      - "1234:8080"
     depends_on:
       - vprodb
 
