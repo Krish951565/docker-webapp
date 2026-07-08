@@ -1,14 +1,14 @@
 version: '3'
 services:
   vproapp:
-    image: krish889/apprepo:myapp
+    image: krish889/apprepo:appjava
     ports:
       - "1234:8080"
     depends_on:
       - vprodb
 
   vprodb:
-    image: krish889/dbrepo:mydb
+    image: krish889/dbrepo:dbjava
     ports:
       - "3306:3306"
     volumes:
