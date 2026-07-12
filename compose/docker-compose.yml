@@ -1,20 +1,13 @@
 version: '3'
 services:
-  vproapp:
+  application:
     image: krish889/apprepo:appjava
     ports:
       - "1234:8080"
     depends_on:
-      - vprodb
+      - database
 
-  vprodb:
+  database:
     image: krish889/dbrepo:dbjava
     ports:
       - "3306:3306"
-    volumes:
-      - vprodbdata:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=vprodbpass
-
-volumes:
-  vprodbdata: {}
