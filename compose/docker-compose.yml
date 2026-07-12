@@ -1,13 +1,13 @@
 version: '3'
 services:
   application:
-    image: krish889/apprepo:appjava
+    image: krish889/javaapprepo:JAVA
     ports:
       - "1234:8080"
     depends_on:
       - database
 
   database:
-    image: krish889/dbrepo:dbjava
+    image: krish889/javadbrepo:JAVA
     ports:
       - "3306:3306"
